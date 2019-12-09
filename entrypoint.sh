@@ -10,5 +10,5 @@ nginx &
 sleep 1
 
 # Start the linkchecker
-/root/.pub-cache/bin/linkcheck :80
+/root/.pub-cache/bin/linkcheck :80 -e
 
