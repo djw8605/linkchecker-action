@@ -5,5 +5,7 @@ RUN wget -qO- https://storage.googleapis.com/download.dartlang.org/linux/debian/
 RUN apt-get update && apt-get install dart -y
 RUN /usr/lib/dart/bin/pub global activate linkcheck
 
+ADD ./entrypoint.sh /entrypoint.sh
+
 ENTRYPOINT [ "/entrypoint.sh" ]
 
