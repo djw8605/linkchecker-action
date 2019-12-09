@@ -3,7 +3,7 @@
 site_dir=$1
 
 # Start the nginx server
-rsync  $site_dir/ /var/www/html/
+rsync -a $site_dir/ /var/www/html/
 nginx &
 
 # Allow nginx to startup
