@@ -1,0 +1,15 @@
+# action.yml
+name: 'Static Site Linkchecker'
+description: 'Check links of a statically generated site'
+inputs:
+  site-dir:  # id of input
+    description: 'Directory of the site'
+    required: true
+    default: 'site'
+
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.site-dir }}
